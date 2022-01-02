@@ -1,10 +1,11 @@
 import './navbar.scss'
 import {Search, Notifications, ArrowDropDown} from '@material-ui/icons';
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     
-    //Seting scroll effect on navbar using useState.
+    //Seting scroll effect on navbar using useState (ReactHook).
 
     const [isScrolled, setIsScrolled] = useState(false)
     window.onscroll = () =>{
@@ -17,9 +18,15 @@ export const Navbar = () => {
             <div className="container">
                 <div className="left">
                     <img className='logo' src="/unnamed-removebg-preview.png" alt="" />
+                    <Link to='/' className='link'>
                     <span>Home</span>
+                    </Link>
+                    <Link to='/series' className='link'>
                     <span>Series</span>
+                    </Link>
+                    <Link to='/movies' className='link'>
                     <span>Movies</span>
+                    </Link>
                     <span>New and Popular</span>
                     <span>My List</span>
                 </div>
