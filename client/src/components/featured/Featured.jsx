@@ -1,7 +1,27 @@
 import './featured.scss'
 import {PlayArrow, InfoOutlined} from '@material-ui/icons';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function Featured({ type }) {
+    //Getting a random content on the home page
+    const [content, setContent] = useState({})
+    useEffect(()=>{
+        const getRandomContent = async() =>{
+            try {
+                const res = await axios.get(`/movies/random?type=${type}`, {
+                    //Adding a webToken for authentication
+                    headers: {
+                        token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzZhYTVkZWE4OWFkZjhlYWJlODMwOSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MTE0OTQzMCwiZXhwIjoxNjQxNTgxNDMwfQ.YQAXIwlzGw4bgduoWqcw2e6P6o9KGdmxAXbpCjpUY3s'
+                    }
+                })
+                setContent(res.data[0])
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getRandomContent()
+    }, [type])
     return (
         <div className='featured'>
             
@@ -26,19 +46,11 @@ export default function Featured({ type }) {
                     </select>
                 </div>
             )}
-           <img width= '100%' className='background' src="/bcg.jpg" alt="" />
+           <img width= '100%' className='background' src={content.img} alt="" />
           <div className="info">
-          <img src="/spat.png" alt="" />
+          <img src={content.imgTitle} alt="" />
           <span className='desc'>
-          Spartacus is an American television series
-          produced in New Zealand that premiered on
-          Starz on January 22, 2010, and concluded 
-          on April 12, 2013.
-          First episode date: January 22, 2010
-          Genre: Historical drama; Sword-and-sandal
-          Producers: Chloe Smith; Charles Knight; Aaron Lam
-          Composer: Joseph LoDuca
-          Created by: Sam Raimi; Steven S. DeKnight
+                {content.desc}
           </span>
           <div className="buttons">
               <button className='play'>

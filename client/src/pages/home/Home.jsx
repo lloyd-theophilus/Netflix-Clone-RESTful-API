@@ -13,7 +13,8 @@ export default function Home({type}) {
         const getRandomLists = async () => {
             try {
                 const res = await axios.get(
-                    `lists${type ? '?type' + type: ''}${genre ? '&genre' + genre: ''}`, {
+                    `lists${type ? '?type' + type: ''}${genre ? '&genre' + genre: ''}`, 
+                    {
                         //Adding a webToken for authentication
                         headers: {
                             token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzZhYTVkZWE4OWFkZjhlYWJlODMwOSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MTE0OTQzMCwiZXhwIjoxNjQxNTgxNDMwfQ.YQAXIwlzGw4bgduoWqcw2e6P6o9KGdmxAXbpCjpUY3s'
