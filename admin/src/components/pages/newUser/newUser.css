@@ -1,0 +1,63 @@
+.NewUser{
+    flex: 4;
+}
+
+.newUserTitle{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.newUserform{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newUserItem{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.newUserItem>label{
+    margin-bottom: 10px;
+    font-style: 16px;
+    font-weight: 600;
+}
+
+.newUserItem>input{
+    height: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.newUserGender>input{
+    margin-top: 15px;
+}
+
+.newUserGender>label{
+    margin: 10px;
+    font-style: 16px;
+}
+
+.newUserSelect{
+    height: 40px;
+    border-radius: 5px;
+}
+
+.newUserButton{
+    width: 150px;
+    border: none;
+    background-color:black;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 7px 10px;
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    
+}
