@@ -1,0 +1,119 @@
+.product{
+    flex: 4;
+    padding: 20px;
+}
+
+
+.productTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productAddButton{
+    width: 80px;
+    border: none;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 16;
+    cursor: pointer;
+}
+
+.productInfoImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.productInfoTo{
+    display: flex;
+    align-items: center;
+}
+
+.productName{
+    font-weight: 600;
+}
+
+.productInfoButton{
+    margin-top: 10px;
+}
+
+.productInfoItem{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.productInfoKey{
+    margin-right: 20px;
+}
+
+
+.productInfoValue{
+    font-weight: 300;
+}
+
+.productButton{
+    padding: 20px;
+    margin: 20px;
+}
+
+.productform{
+    display: flex;
+    justify-content: space-between;
+}
+
+.productFromLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.productFromLeft>label{
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.productFromLeft>input{
+    margin-bottom: 10px;
+    border: none;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.productFromLeft>select{
+    margin-bottom: 10px;
+}
+
+.productUploadImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.productFromRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.productUpload{
+    display: flex;
+    align-items: center;
+}
+
+.productButton{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
